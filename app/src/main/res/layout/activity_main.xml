@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtBiodata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:fontFamily="casual"
+        android:text="Biodata Singkat"
+        tools:fontFamily="serif"
+        tools:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/editNama"
+        android:layout_width="298dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtBiodata"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="77dp"
+        android:layout_marginEnd="-117dp"
+        android:ems="10"
+        android:hint="Nama"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editTahun"
+        android:layout_width="293dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editNama"
+        android:layout_alignEnd="@+id/editNama"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="153dp"
+        android:layout_marginEnd="7dp"
+        android:ems="10"
+        android:hint="Tahun Lahir"
+        android:inputType="textPersonName" />
+
+    <Spinner
+        android:id="@+id/spKota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtWilayah"
+        android:layout_alignStart="@+id/txtWilayah"
+        android:layout_marginTop="6px"
+        android:entries="@array/kota" />
+
+    <Spinner
+        android:id="@+id/spProvinsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spKota"
+        android:layout_alignStart="@+id/spKota"
+        android:layout_marginTop="10dp"
+        android:entries="@array/provinsi" />
+
+    <TextView
+        android:id="@+id/txtWilayah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTahun"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="11dp"
+        android:text="wilayah"
+        android:textSize="18sp"
+        tools:fontFamily="monospace" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spProvinsi"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="Submit" />
+
+    <TextView
+        android:id="@+id/txtHasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSubmit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:text="Hasil" />
+</RelativeLayout>
